@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax Scrolling Website </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header id="header">
+        <a href="#" class="logo">Density</a>
+        <ul>
+            <li><a href="#" class="First">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Destination</a></li>
+            <li><a href="#">Services</a></li>
+        </ul>
+    </header>
+    <section>
+        <h2 id="text"><span>Welcome to the</span><br>Density world!</h2>
+        <img src="./bird1.png" id="bird1">
+        <img src="./bird2.png" id="bird2">
+        <img src="./forest.png" id="forest">
+        <a href="#" id="btn">Explore</a>
+        <img src="./rocks.png" id="rocks">
+        <img src="./water.png" id="water">
+    </section>
+    <div class="sec">
+        <h2>What are Density Exchange provide?</h2>
+        <br>
+        <p>Density Exchange is a platform that has emerged as a crucial tool in the ever-evolving landscape of trading and financial markets.<br>
+            It offers a suite of features designed to empower traders with real-time insights and data that are indispensable in today's<br>
+            fast-paced and dynamic markets. One of its standout features is the provision of real-time order book insights for various trading pairs.<br>
+            The order book, often considered the heartbeat of any trading ecosystem, offers a comprehensive view of buy and sell orders at different price levels.<br>
+            Having access to this data in real-time equips traders with the ability to gauge market sentiment, track liquidity, and anticipate potential price movements.<br>
+           <br>
+            This, in turn, enables them to make well-informed and timely decisions, ultimately enhancing their trading strategies. Furthermore, the<br>
+            'New Market Screen' feature is another invaluable tool in the trader's arsenal, allowing them to uncover emerging trends in the markets.<br>
+            With the rapid pace of change in the world of cryptocurrencies and financial assets, spotting these trends early can make a substantial difference.<br>
+            Whether it's a sudden surge in trading volume, a cryptocurrency gaining popularity, or any other market development, this feature consolidates this<br>
+            information, giving traders the means to respond swiftly and capitalize on market movements. In a world where every second counts and market dynamics<br>
+            can change in the blink of an eye, Density Exchange serves as a reliable ally for traders seeking to navigate these markets effectively and<br>
+            seize opportunities as they arise.<br>
+           <br>
+           
+           Density Exchange is a platform that has emerged as a crucial tool in the ever-evolving landscape of trading and financial markets.<br>
+            It offers a suite of features designed to empower traders with real-time insights and data that are indispensable in today's<br>
+            fast-paced and dynamic markets. One of its standout features is the provision of real-time order book insights for various trading pairs.<br>
+            The order book, often considered the heartbeat of any trading ecosystem, offers a comprehensive view of buy and sell orders at different price levels.<br>
+            Having access to this data in real-time equips traders with the ability to gauge market sentiment, track liquidity, and anticipate potential price movements.<br>
+           <br>
+            This, in turn, enables them to make well-informed and timely decisions, ultimately enhancing their trading strategies. Furthermore, the<br>
+            'New Market Screen' feature is another invaluable tool in the trader's arsenal, allowing them to uncover emerging trends in the markets.<br>
+            With the rapid pace of change in the world of cryptocurrencies and financial assets, spotting these trends early can make a substantial difference.<br>
+            Whether it's a sudden surge in trading volume, a cryptocurrency gaining popularity, or any other market development, this feature consolidates this<br>
+            information, giving traders the means to respond swiftly and capitalize on market movements. In a world where every second counts and market dynamics<br>
+            can change in the blink of an eye, Density Exchange serves as a reliable ally for traders seeking to navigate these markets effectively and<br>
+            seize opportunities as they arise.<br>
+           <br></p>
+    </div>
+
+    <script>
+        let text = document.getElementById('text');
+        let bird1 = document.getElementById('bird1');
+        let bird2 = document.getElementById('bird2');
+        let btn = document.getElementById('btn');
+        let forest = document.getElementById('forest');
+        let rocks = document.getElementById('rocks');
+        let water = document.getElementById('water');
+        let header = document.getElementById('header');
+
+        window.addEventListener('scroll', function(){
+            let value = window.scrollY;
+
+            text .style.top = 50 + value * -0.5 + '%';
+            bird1.style.top = value * -1.5 + 'px';
+            bird1.style.left = value * 2 + 'px';
+            bird2.style.top = value * -1.5 + 'px';
+            bird2.style.left = value * -5 + 'px';
+            btn.style.marginTop = value * 1.5 + 'px';
+            rocks.style.top = value * -0.12 + 'px';
+            forest.style.top = value * 0.25 + 'px';
+            header.style.top = value * -0.5 + 'px';
+        })
+    </script>
+</body>
+</html>
